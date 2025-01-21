@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page 3</title>
+    <script>
+        window.onload = function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const num1 = parseFloat(urlParams.get('num1')) || 0;
+            const num2 = parseFloat(urlParams.get('num2')) || 0;
+            const result = num1 + num2;
+
+            document.getElementById('result').innerText = `The result is: ${result}`;
+        };
+    </script>
+</head>
+<body>
+    <h1>Result</h1>
+    <p id="result">Calculating...</p>
+</body>
+</html>
